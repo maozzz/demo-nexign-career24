@@ -4,7 +4,7 @@
 - далее запросы в соответствии с ТЗ
 
 Создание пользователя
-```aidl
+```curl
 curl --location --request POST 'localhost:8080/lottery/participant' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -15,12 +15,12 @@ curl --location --request POST 'localhost:8080/lottery/participant' \
 ```
 
 Список пользователей
-```aidl
+```curl
 curl --location --request GET 'localhost:8080/lottery/participant'
 ```
 
 Старт рулетки
-```aidl
+```curl
 curl --location --request POST 'localhost:8080/lottery/participant' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -31,7 +31,7 @@ curl --location --request POST 'localhost:8080/lottery/participant' \
 ```
 
 победители
-```aidl
+```curl
 curl --location --request GET 'localhost:8080/lottery/winners'
 ```
 
