@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  postgres:
+    container_name: nexign-demo-postgres
+    image: "postgres:12"
+    environment:
+      POSTGRES_USER: "postgres-user"
+      POSTGRES_PASSWORD: "postgres-password"
+      POSTGRES_DB: "demo"
+    ports:
+      - ${POSTGRES_PORT:-5432}:5432
