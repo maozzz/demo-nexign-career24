@@ -45,7 +45,7 @@ public class LotteryService {
         return currentLotteryId;
     }
 
-    public synchronized User start() {
+    public User start() {
         Lottery current = lotteryRepository.findById(current()).get();
         List<User> users = current.getUsers();
         if (users.size() < 2) {
